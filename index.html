@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My First Website</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="styles.css" rel='stylesheet' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h1 class='display-1'>My Calculator</h1>
+        <p class="lead">
+          <blockquote class="blockquote">
+            <p class="mb-0">Bom! 2 + 2 is 4 minus 1 that's 3, quick maths!</p>
+            <footer class="blockquote-footer">A man who is not hot, a.k.a,  <cite title="Source Title">Big Shaq</cite></footer>
+          </blockquote>
+        </p>
+      </div>
+    </div>
+    <hr />
+   
+    <div class="row">
+      <div class="col">
+        <input type="number" class="form-control" id="firstNumber" placeholder="First Number">
+      </div>
+      <div class="col">
+        <input type="number" class="form-control" id="secondNumber" placeholder="Second Number">
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="btn-group" role="group" aria-label="Basic example">
+          <button onclick="add()" type="button" class="btn btn-primary">add</button>
+          <button onclick="subtract()" type="button" class="btn btn-secondary">subtract</button>
+          <button onclick="multiply()" type="button" class="btn btn-info">multiply</button>
+          <button onclick="divide()" type="button" class="btn btn-warning">divide</button>
+      </div>
+      <button onclick="onClear()" type="button" class="btn btn-danger">clear</button>
+    </div>
+   
+    <div class="row mt-3">
+        <div class="col">
+          <h1>Answers:</h1>
+          <h1 id="answer"></h1>
+          
+
+        </div>
+    </div>
+    
+</body>
+
+
+
+<script>
+
+      
+      function add(){
+
+      const firstString=document.getElementById('firstNumber').value;
+      const secondString=document.getElementById('secondNumber').value;
+
+      const firstNumber = parseInt(firstString);
+      const secondNumber = parseInt(secondString);
+      const total = firstNumber + secondNumber;
+     
+      alert(total);
+
+      }
+
+
+      function subtract(){
+
+      const firstString=document.getElementById('firstNumber').value;
+      const secondString=document.getElementById('secondNumber').value;
+
+      const firstNumber = parseInt(firstString);
+      const secondNumber = parseInt(secondString);
+      const results = firstNumber - secondNumber;
+     
+      alert(results);
+      }
+
+      function multiply(){
+
+      const firstString=document.getElementById('firstNumber').value;
+      const secondString=document.getElementById('secondNumber').value;
+
+      const firstNumber = parseInt(firstString);
+      const secondNumber = parseInt(secondString);
+      const total = firstNumber * secondNumber;
+
+      alert(total);
+      }
+
+      function divide(){
+
+      const firstString=document.getElementById('firstNumber').value;
+      const secondString=document.getElementById('secondNumber').value;
+
+      const firstNumber = parseInt(firstString);
+      const secondNumber = parseInt(secondString);
+      const total = firstNumber / secondNumber;
+
+      alert(total);
+      }
+
+      function onClear(){
+        clearInput();
+
+      }
+     
+      function clearInput(){
+        document.getElementById('firstNumber').value ="";
+        document.getElementById('secondNumber').value ="";
+        document.getElementById('answer').value="";
+      }
+</script>
+
+</html>
